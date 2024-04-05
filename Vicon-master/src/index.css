@@ -1,0 +1,294 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root{
+  --primary: #6750A4;
+  --primary-container: #EADDFF;
+  --secondary: #625B71;
+  --secondary-container: #E8DEF8;
+  --tertiary: #7D5260 ;
+  --tertiary-container: #FFD8E4;
+  --surface: #FFFBFE;
+  --surface-variant: #E7E0EC;
+  --background: #FFFBFE;
+  --error: #B3261E;
+  --error-container: #F9DEDC;
+  --on-primary: #FFFFFF;
+  --on-primary-container: #21005E;
+  --on-secondary: #FFFFFF;
+  --on-secondary-container: #1E192B;
+  --on-tertiary: #FFFFFF;
+  --on-tertiary-container: #370B1E;
+  --on-surface: #1C1B1F;
+  --on-surface-variant: #49454E;
+  --on-error: #FFFFFF;
+  --on-error-container: #370B1E;
+  --on-background: #1C1B1F;
+  --outline: #79747E;
+  --shadow: #000000;
+  --surface-tint: #6750A4;
+  --surface-tint-elevation-1: rgba(103, 80, 164, 0.05);
+  --surface-tint-elevation-2: rgba(103, 80, 164, 0.08);
+  --surface-tint-elevation-3: rgba(103, 80, 164, 0.11);
+  --surface-tint-elevation-4: rgba(103, 80, 164, 0.12);
+  --surface-tint-elevation-5: rgba(103, 80, 164, 0.14);
+  --inverse-surface: #313033;
+  --inverse-on-surface: #F4EFF4;
+  --inverse-primary: #D0BCFF;
+  --menu: rgba(241, 237, 246);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --primary: #D0BCFF;
+    --primary-container: #4F378B;
+    --secondary: #CCC2DC;
+    --secondary-container: #4A4458;
+    --tertiary: #EFB8C8;
+    --tertiary-container: #633B48;
+    --surface: #1C1B1F;
+    --surface-variant: #49454F;
+    --background: #1C1B1F;
+    --error: #F2B8B5;
+    --error-container: #8C1D18;
+    --on-primary: #371E73;
+    --on-primary-container: #EADDFF;
+    --on-secondary: #332D41;
+    --on-secondary-container: #E8DEF8;
+    --on-tertiary: #492532;
+    --on-tertiary-container: #FFD8E4;
+    --on-surface: #E6E1E5;
+    --on-surface-variant: #CAC4D0;
+    --on-error: #601410;
+    --on-error-container: #F9DEDC;
+    --on-background: #E6E1E5;
+    --outline: #938F99;
+    --shadow: #000000;
+    --surface-tint: #D0BCFF;
+    --surface-tint-elevation-1: rgba(208, 188, 255, 0.05);
+    --surface-tint-elevation-2: rgba(208, 188, 255, 0.08);
+    --surface-tint-elevation-3: rgba(208, 188, 255, 0.11);
+    --surface-tint-elevation-4: rgba(208, 188, 255, 0.12);
+    --surface-tint-elevation-5: rgba(208, 188, 255, 0.14);
+    --inverse-surface: #E6E1E5;
+    --inverse-on-surface: #313033;
+    --inverse-primary: #6750A4;
+    --menu: rgba(39, 38, 46);
+  }
+}
+
+h1{
+  color: var(--on-surface);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+h2, h3, h4, h5, h6{
+  color: var(--on-surface);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+p{
+  color: var(--on-surface);
+}
+
+p, a, input, label{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+span{
+  color: var(--on-surface);
+}
+
+/* BUTTONS */
+
+button{
+  font-size: 0.875rem; /* 14px equivalent */
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button span{
+  margin-right: 0.5rem;
+}
+
+button img{
+  margin-right: 0.5rem;
+}
+
+.button-filled{
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  border-radius: 1.25rem;
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.button-filled span{
+  color: var(--on-primary);
+}
+
+.button-tonal{
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  border-radius: 1.25rem;
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+
+/* INPUT */
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; 
+  border: none;
+}
+
+select{
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;  */
+}
+
+select{
+  background: var(--surface-tint-elevation-1);
+  border-radius: 8px 8px 0 0;
+  padding: 0 1rem;
+  color: var(--on-surface);
+}
+
+select:hover{
+  background: var(--surface-tint-elevation-2);
+}
+
+.input-container{
+  position: relative;
+}
+
+.input-normal{
+  width: 100%;
+  background: var(--surface-tint-elevation-1);
+  border-radius: 8px 8px 0 0;
+  /* border-bottom: 1px solid var(--outline); */
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  display: flex;
+  color: var(--on-surface);
+}
+
+.input-normal:hover{
+  background: var(--surface-tint-elevation-2);
+}
+
+.input-normal:focus{
+  border-bottom: 2px solid var(--primary);
+}
+
+.input-label{
+  position: absolute;
+  left: 1rem;
+  top: 0.875rem;
+  font-size: 1rem;
+  font-size: 0.875rem; /*14px*/
+  transition: top 0.2s, font-size 0.2s;
+  color: var(--on-surface);
+  padding: 0 0.25rem;
+  padding: 0;
+}
+
+.input-normal:focus + .input-label{
+  top: 10px;
+  font-size: 0.625rem;
+  color: var(--primary);
+}
+
+.input-normal:not([value=""]):not(:focus) + .input-label{
+  top: 10px;
+  font-size: 0.625rem;
+  color: var(--on-surface);
+  opacity: 0.7;
+}
+
+input[type="date"]{
+  background: var(--surface-tint-elevation-3);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* .input-normal[value=""]{
+  background: cyan;
+} */
+
+/* TABLE */
+
+table{
+  border-collapse: separate;
+  font-size: 0.875rem;
+  font-size: 1rem;
+  border: 1px solid var(--surface-tint-elevation-3);
+  border-radius: 16px;
+  width: 100%;
+  color: var(--on-surface);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+tbody:hover {
+  background: var(--surface-tint-elevation-2);
+}
+
+tr{
+  height: 56px;
+}
+
+
+th{
+  background: var(--surface-tint-elevation-1);
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 2rem;
+}
+
+th:first-child{
+  border-top-left-radius: 16px;
+
+}
+
+th:last-child{
+  border-top-right-radius: 16px;
+}
+
+td{
+  font-size: 0.875rem;
+  padding: 0 2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

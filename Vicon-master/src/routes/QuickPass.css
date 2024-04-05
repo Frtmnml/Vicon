@@ -1,0 +1,76 @@
+/* QUICKPASS */
+
+.quickpass{
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quickpass-modal{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.16);
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: modalAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    opacity: 0;
+    z-index: 110;
+  }
+  
+  @keyframes modalAnimation {
+    0%   {opacity: 0}
+    25%  {opacity: 1}
+    75%  {opacity: 1}
+    100% {opacity: 0}
+  }
+  
+  
+  .quickpass-modal-content{
+    background: var(--surface);
+    width: 480px;
+    border-radius: 12px;
+    padding: 2rem;
+    animation-name: modalContentAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes modalContentAnimation {
+    0%   {transform: translateY(40px);}
+    25%  {transform: translateY(0px);}
+    75%  {transform: translateY(0px);}
+    100% {transform: translateY(40px);}
+  }
+  
+  .quickpass-circle{
+    height: 196px;
+    width: 196px;
+    background: var(--primary-container);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    color: var(--on-primary-container);
+    animation-name: circleAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes circleAnimation {
+    from   {transform: scale(1.2);}
+    to   {transform: scale(1);}
+  }
